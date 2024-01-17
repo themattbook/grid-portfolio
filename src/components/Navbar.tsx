@@ -7,7 +7,7 @@ export default function Navbar({ onToggleMode }: NavbarProps) {
 		onToggleMode();
 	};
 	return (
-		<nav>
+		<nav role='navigation'>
 			<div className='nav-items'>
 				<ul>
 					<li>about</li>
@@ -15,7 +15,7 @@ export default function Navbar({ onToggleMode }: NavbarProps) {
 					<li>hire me</li>
 					<li>github</li>
 					<li>archive</li>
-					<li onClick={handleIconClick}>
+					<li onClick={handleIconClick} role='img'>
 						<BsCircleHalf />
 					</li>
 				</ul>

@@ -7,7 +7,10 @@ export default function App() {
 		setIsDarkMode((isDarkMode) => !isDarkMode);
 	};
 	return (
-		<div className={`${isDarkMode ? "dark" : "light"}`}>
+		<div
+			className={`${isDarkMode ? "dark" : "light"}`}
+			data-testid='app-container'
+		>
 			<div className='container'>
 				<Navbar onToggleMode={toggleMode} />
 				<main>

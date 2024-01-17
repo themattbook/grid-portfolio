@@ -1,6 +1,6 @@
 export default function Experience() {
 	return (
-		<section className='experience'>
+		<section className='experience' role='experience'>
 			<p>
 				I&apos;m one of the maintainers of{" "}
 				<a href='https://opensource-socialnetwork.org' target='_blank'>
