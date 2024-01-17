@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+:root {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--base-padding: 0.25rem;
+
+	/* Dark Theme */
+	--background-dark: #1a1a1a;
+	--text-dark: #efefef;
+	--accent-dark: #3498db;
+	--secondary-dark: #2ecc71;
+
+	/* Light Theme */
+	--background-light: #ffffff;
+	--text-light: #000;
+	--accent-light: #3498db;
+	--secondary-light: #2ecc71;
+
+	--dark-border-color: #333;
+	--light-border-color: #eee;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 300ms;
+}
+
+body {
+	font-family: rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+		Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-weight: 400;
+	font-size: 1.4em;
+}
+
+a {
+	color: #0284c7;
+	text-decoration: underline;
+	font-weight: 700;
+}
+
+a:hover {
+	color: #67c4f0;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+	width: 45vw;
+	margin-inline: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"nav nav"
+		"main artwork"
+		"experience experience";
+	grid-gap: 0.5rem;
+}
+
+nav {
+	grid-area: nav;
+	padding: var(--base-padding);
+	display: flex;
+	align-items: center;
+	margin: 1em 0 1em 0;
+}
+
+.nav-items {
+	width: 100%;
+	font-weight: 700;
+}
+
+.nav-items ul {
+	list-style: none;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	font-weight: 700;
+	font-size: 0.8em;
+}
+
+.nav-items li {
+	font-weight: bold;
+	text-transform: lowercase;
+	cursor: pointer;
+	transition-property: transform, color;
+	transition-timing-function: ease-in-out;
+	transition-duration: 300ms;
+}
+
+.nav-items li:hover {
+	color: #0ea5e9;
+	transform: scale(1.25);
+}
+
+main {
+	grid-area: main;
+	padding: var(--base-padding);
+}
+
+main p {
+	margin: 0 0 1.5rem;
+}
+
+.headline {
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 50px;
+	padding: 2rem 0;
+}
+
+.artwork {
+	grid-area: artwork;
+	padding: var(--base-padding);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.artwork img {
+	max-width: 300px;
+	object-fit: cover;
+	aspect-ratio: 1/1;
+}
+
+.experience {
+	grid-area: experience;
+	padding: var(--base-padding);
+	font-size: 20px;
+	margin-top: 1rem;
+}
+
+.experience p {
+	margin-top: 1em;
+}
+
+.dark {
+	--border: var(--dark-border-color);
+	background: var(--background-dark);
+	color: var(--text-dark);
+}
+
+.light {
+	--border: var(--light-border-color);
+	background: var(--background-light);
+	color: var(--text-light);
+}
+
+@media only screen and (max-width: 550px) {
+	nav {
+		display: none;
+	}
+
+	.container {
+		width: 100vw;
+		padding: 2rem;
+		grid-template-columns: 1fr;
+		grid-template-rows: 2.2fr 3fr 2.2fr;
+		grid-template-areas:
+			"artwork"
+			"main"
+			"experience";
+	}
+}
