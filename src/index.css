@@ -50,7 +50,7 @@ a {
 
 .container {
 	display: grid;
-	height: 100vh;
+	min-height: 100vh;
 	width: 45vw;
 	margin-inline: auto;
 	grid-template-columns: 1fr 1fr;
@@ -144,6 +144,23 @@ main p {
 
 .content p {
 	margin-top: 1rem;
+}
+
+.content h3 {
+	margin-top: 1rem;
+}
+
+.content ul {
+	margin-left: 2rem;
+}
+
+.content li {
+	margin-block: 2rem;
+}
+
+.about {
+	display: flex;
+	align-items: center;
 }
 
 .dark {

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link, Location } from "react-router-dom";
 interface NavbarProps {
 	onToggleMode: () => void;
+	location: Location;
 }
 export default function Navbar({ onToggleMode }: NavbarProps) {
 	const [modeText, setModeText] = useState("dark");
@@ -15,18 +17,21 @@ export default function Navbar({ onToggleMode }: NavbarProps) {
 		onToggleMode();
 		modeTextLabel();
 	};
+	const path = location.pathname;
+	console.log(location);
 	return (
 		<nav role='navigation'>
 			<div className='nav-items'>
 				<ul>
 					<li>
-						<a href='/'>home</a>
-					</li>
-					<li>
-						<a href='/about'>about</a>
+						<Link to={path === "/about" ? "/" : "/about"}>
+							{path === "/about" ? "home" : "about"}
+						</Link>
 					</li>
 					<li>resume</li>
-					<li>hire me</li>
+					<li>
+						<Link to='/work'>hire me</Link>
+					</li>
 					<li>github</li>
 					<li>archive</li>
 					<li onClick={handleIconClick} role='img'>

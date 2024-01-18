@@ -1,7 +1,7 @@
 export default function Home() {
 	return (
 		<>
-			<main className='intro'>
+			<main>
 				<h1 className='headline'>
 					Matthew
 					<br />
