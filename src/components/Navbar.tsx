@@ -17,21 +17,29 @@ export default function Navbar({ onToggleMode }: NavbarProps) {
 		onToggleMode();
 		modeTextLabel();
 	};
-	const path = location.pathname;
-	console.log(location);
+	const shouldRenderLink = (path: string) => {
+		return location.pathname !== path;
+	};
 	return (
 		<nav role='navigation'>
 			<div className='nav-items'>
 				<ul>
-					<li>
-						<Link to={path === "/about" ? "/" : "/about"}>
-							{path === "/about" ? "home" : "about"}
-						</Link>
-					</li>
+					{shouldRenderLink("/") && (
+						<li>
+							<Link to='/'>home</Link>
+						</li>
+					)}
+					{shouldRenderLink("/about") && (
+						<li>
+							<Link to='/about'>about</Link>
+						</li>
+					)}
+					{shouldRenderLink("/work") && (
+						<li>
+							<Link to='/work'>hire me</Link>
+						</li>
+					)}
 					<li>resume</li>
-					<li>
-						<Link to='/work'>hire me</Link>
-					</li>
 					<li>github</li>
 					<li>archive</li>
 					<li onClick={handleIconClick} role='img'>

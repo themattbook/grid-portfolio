@@ -1,11 +1,16 @@
 export default function About() {
 	return (
 		<>
-			<main className='about'>
-				<h1 className='headline'>About Me</h1>
-			</main>
-			<section className='artwork'>
-				<img src='/me_2.webp' alt='a beautifully styled computer' />
+			<section className='grid-cols-2'>
+				<div className='headline-container'>
+					<h1 className='headline'>About Me</h1>
+				</div>
+				<div className='img-container'>
+					<img
+						src='/computer.svg'
+						alt='a beautifully styled computer'
+					/>
+				</div>
 			</section>
 			<section className='content' role='experience'>
 				<h3>DFN Freight Network</h3>

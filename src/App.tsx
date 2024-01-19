@@ -15,14 +15,14 @@ export default function App() {
 			className={`${isDarkMode ? "dark" : "light"}`}
 			data-testid='app-container'
 		>
-			<div className='container'>
+			<main className='content-grid'>
 				<Navbar onToggleMode={toggleMode} location={location} />
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/work' element={<Hire />} />
 				</Routes>
-			</div>
+			</main>
 		</div>
 	);
 }

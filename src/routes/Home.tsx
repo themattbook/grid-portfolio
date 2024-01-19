@@ -1,25 +1,27 @@
 export default function Home() {
 	return (
 		<>
-			<main>
-				<h1 className='headline'>
-					Matthew
-					<br />
-					Sweet
-				</h1>
-				<p>
-					I&apos;m a <strong>fullstack engineer</strong> with a
-					passion for building dynamic web applications. I can work
-					with your company as a <strong>full time</strong> developer
-					or contract consultant. I bring to the table{" "}
-					<strong>expertise</strong> on React, Vue, Sass, Tailwindcss,
-					and API design.
-				</p>
-			</main>
-			<section className='artwork'>
-				<img src='/me_2.webp' alt='a beautifully styled computer' />
+			<section className='grid-cols-2'>
+				<div>
+					<h1 className='headline'>
+						Matthew
+						<br />
+						Sweet
+					</h1>
+					<p>
+						I&apos;m a <strong>fullstack engineer</strong> with a
+						passion for building dynamic web applications. I can
+						work with your company as a <strong>full time</strong>{" "}
+						developer or contract consultant. I bring to the table{" "}
+						<strong>expertise</strong> on React, Vue, Sass,
+						Tailwindcss, and API design.
+					</p>
+				</div>
+				<div className='img-container'>
+					<img src='/me_2.webp' alt='a beautifully styled computer' />
+				</div>
 			</section>
-			<section className='content' role='experience'>
+			<section className='home-content'>
 				<p>
 					I&apos;m one of the maintainers of{" "}
 					<a
