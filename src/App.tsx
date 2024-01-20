@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Hire from "./routes/HireMe";
+import Resume from "./routes/Resume";
 import { useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
 					<Route path='/work' element={<Hire />} />
+					<Route path='/resume' element={<Resume />} />
 				</Routes>
 			</main>
 		</div>

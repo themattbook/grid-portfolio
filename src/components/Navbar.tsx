@@ -39,9 +39,21 @@ export default function Navbar({ onToggleMode }: NavbarProps) {
 							<Link to='/work'>hire me</Link>
 						</li>
 					)}
-					<li>resume</li>
-					<li>github</li>
-					<li>archive</li>
+					{shouldRenderLink("/resume") && (
+						<li>
+							<Link to='/resume'>resume</Link>
+						</li>
+					)}
+					<li>
+						<Link
+							to='https://github.com/themattbook'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							github
+						</Link>
+					</li>
+					<li>projects</li>
 					<li onClick={handleIconClick} role='img'>
 						{modeText}
 					</li>

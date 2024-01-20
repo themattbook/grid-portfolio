@@ -6,15 +6,12 @@ export default function HireMe() {
 					<h1 className='headline'>Hire Me</h1>
 				</div>
 				<div className='img-container'>
-					<img
-						src='/computer.svg'
-						alt='a beautifully styled computer'
-					/>
+					<img src='/build.svg' alt='a man building a website' />
 				</div>
 			</section>
 			<section className='content' role='experience'>
 				<p>
-					I have been a developer for over 10 years now, focusing most
+					I have been a developer for over 15 years now, focusing most
 					of my experience on Upwork as a contractor. From there, I
 					delivered a consistent 4.5 star and up rating from my
 					clients. From writing unit and integration tests, to working

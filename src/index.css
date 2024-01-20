@@ -7,7 +7,7 @@
 	--base-padding: 0.25rem;
 
 	/* Dark Theme */
-	--background-dark: #202124;
+	--background-dark: #1a1a1a;
 	--text-dark: #fff;
 	--dark-link-color: #67c4f0;
 	--dark-link-hover-color: #0284c7;
@@ -188,6 +188,21 @@ a {
 	--border: var(--light-border-color);
 	background: var(--background-light);
 	color: var(--text-light);
+}
+
+.resume-title {
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 1rem;
+}
+
+.resume-description {
+	margin-block: 1rem;
+}
+
+.resume-technology {
+	opacity: 0.75;
+	font-size: 18px;
 }
 
 @media (max-width: 1200px) {

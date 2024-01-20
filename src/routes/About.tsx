@@ -7,8 +7,8 @@ export default function About() {
 				</div>
 				<div className='img-container'>
 					<img
-						src='/computer.svg'
-						alt='a beautifully styled computer'
+						src='/layout.svg'
+						alt='a man contemplating the layout of a website'
 					/>
 				</div>
 			</section>
