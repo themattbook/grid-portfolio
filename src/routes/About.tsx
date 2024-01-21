@@ -56,10 +56,7 @@ export default function About() {
 				<p>
 					I created an application that allows you, the user, to
 					select a year and a state. From there,{" "}
-					<a
-						href='https://tornadovisualizer.vercel.app/'
-						target='_blank'
-					>
+					<a href='https://tornadotrax.vercel.app/' target='_blank'>
 						Tornado Trax
 					</a>{" "}
 					will show you the complete path of the tornado superimposed
